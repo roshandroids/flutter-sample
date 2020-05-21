@@ -154,7 +154,12 @@ class _UploadBookState extends State<UploadBook> {
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
-                  colors: <Color>[Color(0xffff2193b0), Color(0xffff6dd5ed)])),
+                  colors: <Color>[
+                Color(0xffff2193b0),
+                Color(0xffff6dd5ed),
+                Color(0xfffffDBD4B4),
+                Color(0xfffff7AA1D2)
+              ])),
         ),
       ),
       body: GestureDetector(
@@ -263,7 +268,8 @@ class _UploadBookState extends State<UploadBook> {
                               padding: EdgeInsets.all(8),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(width: .5)),
+                                  border:
+                                      Border.all(width: 1, color: Colors.grey)),
                               child: Text(
                                 "Choose File",
                                 style: GoogleFonts.firaCode(

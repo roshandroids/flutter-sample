@@ -60,8 +60,8 @@ class _UserMainScreenState extends State<UserMainScreen> {
                     text: 'Upload Books',
                   ),
                   GButton(
-                    icon: FontAwesomeIcons.newspaper,
-                    text: 'Posts',
+                    icon: FontAwesomeIcons.slidersH,
+                    text: 'More',
                   ),
                 ],
                 selectedIndex: _selectedIndex,

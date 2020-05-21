@@ -39,7 +39,12 @@ dependencies:
   fluttertoast: ^4.0.1
   google_sign_in: ^4.4.6
   image_picker: ^0.6.3+1
-  flutter_plugin_pdf_viewer: ^1.0.7
+
+  cached_network_image: ^2.2.0+1
+  flutter_pdfview: ^1.0.0+10
+  flutter_cache_manager: ^1.2.2
+
+  # flutter_plugin_pdf_viewer: ^1.0.7
 
 dev_dependencies:
   flutter_test:

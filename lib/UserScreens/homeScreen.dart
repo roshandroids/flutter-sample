@@ -300,6 +300,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       context,
                       MaterialPageRoute(
                           builder: (context) => ReadPdf(
+                                title: document['bookName'],
                                 url: document['pdfUrl'],
                               )));
                 },
@@ -327,10 +328,17 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         flexibleSpace: Container(
           decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: <Color>[Color(0xffff2193b0), Color(0xffff6dd5ed)])),
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[
+                Color(0xffff2193b0),
+                Color(0xffff6dd5ed),
+                Color(0xfffffDBD4B4),
+                Color(0xfffff7AA1D2)
+              ],
+            ),
+          ),
         ),
         actions: <Widget>[
           Center(
@@ -362,6 +370,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     stream: Firestore.instance.collection('Books').snapshots(),
                     builder: (context, snapshot) {
                       if (!snapshot.hasData)
+                        return LinearProgressIndicator(
+                          backgroundColor: Colors.black12,
+                        );
+                      if (snapshot.data == null)
                         return LinearProgressIndicator(
                           backgroundColor: Colors.black12,
                         );

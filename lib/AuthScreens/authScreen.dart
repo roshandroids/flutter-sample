@@ -289,7 +289,7 @@ class _AuthScreenState extends State<AuthScreen> {
               .collection('Users')
               .document(user.uid)
               .setData({
-            'userEmail': email,
+            'email': email,
             'fullName': fullName,
             'photoUrl': photoUrl,
             'id': user.uid,
